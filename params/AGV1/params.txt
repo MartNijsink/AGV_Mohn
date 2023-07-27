@@ -169,13 +169,13 @@ I,supervisor_safety_scanner_enabled,                               1 # 1=use sup
 # Speed controller parameters
 F,mot_ctrl_max_wheel_v_fw,                                  1.600000 # Max drive wheel velocity when driving forwards
 F,mot_ctrl_max_wheel_v_bw,                                  0.800000 # Max drive wheel velocity when driving in reverse
-F,mot_ctrl_max_wheel_acc,                                   0.300000
+F,mot_ctrl_max_wheel_acc,                                   0.400000
 F,mot_ctrl_max_wheel_dec,                                   0.600000
 F,mot_ctrl_output_lowpass_alpha,                            0.250000
 F,max_turn_rate_deg_p_s,                                   40.000000 # Maximum turning rate of vehicle
 F,mot_ctrl_max_steer_rate_deg_p_s,                         40.000000 # max rotation of vehicle heading
-F,mot_ctrl_max_steer_ang_deg,                             100.000000 #
-F,mot_ctrl_min_steer_ang_deg,                            -100.000000 #
+F,mot_ctrl_max_steer_ang_deg,                              90.000000 #
+F,mot_ctrl_min_steer_ang_deg,                             -90.000000 #
 F,mot_ctrl_max_wheel_v_fw_arr[0],                           0.200000 # Max drive wheel velocity when driving forwards
 F,mot_ctrl_max_wheel_v_bw_arr[0],                           0.200000 # Max drive wheel velocity when driving in reverse
 F,mot_ctrl_max_wheel_acc_arr[0],                            0.100000
@@ -374,7 +374,7 @@ F,mot_ctrl_steer_ang_out_dead_band,                         1.000000
 F,spd_ctrl_max_steer_ang_err_deg,                           4.000000
 F,mot_ctrl_steer_ang_stopped_deadband_deg,                  2.000000
 I,mot_ctrl_min_rpm,                                               25
-F,mot_ctrl_steer_angle_hard_limit_deg,                    100.000000
+F,mot_ctrl_steer_angle_hard_limit_deg,                    105.000000
 I,mot_ctrl_steer_torq,                                           200
 I,mot_ctrl_reset_errors_timer,                                  2000
 I,output_trigger_duration_ms,                                    500

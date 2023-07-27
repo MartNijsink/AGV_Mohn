@@ -58,15 +58,15 @@ I,start_pos_ini_enabled,                                           1 # 1 to auto
 I,reported_machine_type,                                      200007 # fake machine ID, used for navithor identification
 
 # Parameters that need to be calibrated for each individual vehicle
-I,machine_id,                                                      12
+I,machine_id,                                                     13
 I,fleet_control_port,                                           6007
 I,fleet_control_type,                                              1 # 1 = default min 0, max 2
 I,veh_inte_send_drive_ready_msg,                                   0 # 1=send vehicel drive ready message to supervisor. 0=do not send (default)
 F,wheel_dist,                                               1.045000 #1.065000 # 1.045000 # Lengthwise offset of steering point wheel from navigation point, positive is toward the front of the machine
 F,wheel_off_center,                                         0.000000 # Sideways offset of steering point wheel from navigation point, positive is to the left
-F,scan_front_x,                                             0.855000
-F,scan_front_y,                                             -0.02500
-F,scan_front_sen_ang,                                          -180  # min -180, max 180
+F,scan_front_x,                                             0.832000
+F,scan_front_y,                                             0.000000
+F,scan_front_sen_ang,                                       -0.65      #-179.800000 # min -180, max 180
 F,scan_rear_x,                                              0.686000
 F,scan_rear_y,                                              0.000000
 F,scan_rear_sen_ang,                                       90.000000 # min -180, max 180
@@ -78,7 +78,7 @@ F,scan_rear_beam_max_ang_deg,                             360.000000 # min 0, ma
 F,mot_ctrl_drive_dist_scale,                             0.000722566 # 0.000722566
 F,mot_ctrl_rpm_to_m_per_s,                                0.00041590 # 0.00042150 # 0.000414950 # 0.000418000 # 000429456 (3.14*0.23)/(60*28.9)=0.000416705.
 I,mot_ctrl_odometry_from_rpm,                                      1 # Source of odometry, 0 = encoder, 1 = rpm; min 0, max 1
-I,can_steer_enc_zero,                                        1447195 # 1446533 
+I,can_steer_enc_zero,                                         33279183
 
 S,agv_ip,                                              192.168.127.2
 I,agv_port,                                                     5015
@@ -168,14 +168,14 @@ I,supervisor_safety_scanner_enabled,                               1 # 1=use sup
 
 # Speed controller parameters
 F,mot_ctrl_max_wheel_v_fw,                                  1.600000 # Max drive wheel velocity when driving forwards
-F,mot_ctrl_max_wheel_v_bw,                                  0.800000 # Max drive wheel velocity when driving in reverse
+F,mot_ctrl_max_wheel_v_bw,                                  0.500000 # Max drive wheel velocity when driving in reverse
 F,mot_ctrl_max_wheel_acc,                                   0.400000
 F,mot_ctrl_max_wheel_dec,                                   0.600000
 F,mot_ctrl_output_lowpass_alpha,                            0.250000
 F,max_turn_rate_deg_p_s,                                   40.000000 # Maximum turning rate of vehicle
 F,mot_ctrl_max_steer_rate_deg_p_s,                         40.000000 # max rotation of vehicle heading
-F,mot_ctrl_max_steer_ang_deg,                             90.000000 #
-F,mot_ctrl_min_steer_ang_deg,                            -90.000000 #
+F,mot_ctrl_max_steer_ang_deg,                              90.000000 #
+F,mot_ctrl_min_steer_ang_deg,                             -90.000000 #
 F,mot_ctrl_max_wheel_v_fw_arr[0],                           0.200000 # Max drive wheel velocity when driving forwards
 F,mot_ctrl_max_wheel_v_bw_arr[0],                           0.200000 # Max drive wheel velocity when driving in reverse
 F,mot_ctrl_max_wheel_acc_arr[0],                            0.100000
@@ -374,7 +374,7 @@ F,mot_ctrl_steer_ang_out_dead_band,                         1.000000
 F,spd_ctrl_max_steer_ang_err_deg,                           4.000000
 F,mot_ctrl_steer_ang_stopped_deadband_deg,                  2.000000
 I,mot_ctrl_min_rpm,                                               25
-F,mot_ctrl_steer_angle_hard_limit_deg,                    100.000000
+F,mot_ctrl_steer_angle_hard_limit_deg,                    105.000000
 I,mot_ctrl_steer_torq,                                           200
 I,mot_ctrl_reset_errors_timer,                                  2000
 I,output_trigger_duration_ms,                                    500
